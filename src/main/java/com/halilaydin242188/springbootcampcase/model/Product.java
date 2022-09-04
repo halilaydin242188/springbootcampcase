@@ -1,6 +1,6 @@
 package com.halilaydin242188.springbootcampcase.model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,5 +26,5 @@ public class Product {
     private Float price;
 
     @Column(name = "expiration_date", nullable = true)
-    private Date expirationdate;
+    private LocalDate expirationdate;
 }

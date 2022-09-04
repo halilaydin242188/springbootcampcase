@@ -1,6 +1,6 @@
 package com.halilaydin242188.springbootcampcase.model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +25,7 @@ public class Productcomment {
     private String comment;
 
     @Column(name = "comment_date", nullable = false)
-    private Date commentdate;
+    private LocalDate commentdate;
 
     @OneToOne
     @JoinColumn(name = "product_id", nullable = false, referencedColumnName = "id")
