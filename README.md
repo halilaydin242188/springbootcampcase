@@ -8,7 +8,7 @@
 ## Request handlers
 ### Get handlers
 * Get product comments by product id : localhost:8080/api/productcomment/byProductId/{productId}
-    productId parameter accepts an integer 
+    productId parameter accepts an integer
     example : localhost:8080/api/productcomment/byProductId/17
 
 * Get product comments by product id and between 2 dates : localhost:8080/api/productcomment/byProductIdBetweenDates
