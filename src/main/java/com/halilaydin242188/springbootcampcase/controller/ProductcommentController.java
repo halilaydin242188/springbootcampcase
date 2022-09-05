@@ -27,13 +27,13 @@ public class ProductcommentController {
         return productcommentRepository.findByProductId(productId);
     }
 
-    @GetMapping("/byProductIdBetweenDates")
-    public List<Productcomment> getByProductBetweenDates(@RequestParam("productId") Long productId,
+    @GetMapping("/byProductIdAndBetweenDates")
+    public List<Productcomment> getByProductIdAndBetweenDates(@RequestParam("productId") Long productId,
 
             @RequestParam("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
 
             @RequestParam("endDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
-        return productcommentRepository.findByProductBetweenDates(productId,
+        return productcommentRepository.findByProductIdAndBetweenDates(productId,
                 startDate, endDate);
     }
 
@@ -41,6 +41,14 @@ public class ProductcommentController {
     public List<Productcomment> getByUserId(@PathVariable Long userId) {
 
         return productcommentRepository.findByUserId(userId);
+    }
+
+    @GetMapping(path = "/byUserIdAndBetweenDates")
+    public List<Productcomment> getByUserIdAndBetweenDates(@RequestParam("userId") Long userId,
+            @RequestParam("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
+            @RequestParam("endDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
+
+        return productcommentRepository.findByUserIdBetweenDates(userId, startDate, endDate);
     }
 
 }

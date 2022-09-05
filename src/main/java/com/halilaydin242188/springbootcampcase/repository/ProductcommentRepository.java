@@ -16,5 +16,8 @@ public interface ProductcommentRepository extends JpaRepository<Productcomment, 
     List<Productcomment> findByUserId(@Param("id") Long id);
 
     @Query(nativeQuery = true, value = "SELECT * FROM product_comments AS pc WHERE pc.product_id = ?1 AND pc.comment_date BETWEEN ?2 AND ?3")
-    List<Productcomment> findByProductBetweenDates(Long id, LocalDate startDate, LocalDate endDate);
+    List<Productcomment> findByProductIdAndBetweenDates(Long id, LocalDate startDate, LocalDate endDate);
+
+    @Query(nativeQuery = true, value = "SELECT * FROM product_comments AS pc WHERE pc.user_id = ?1 AND pc.comment_date BETWEEN ?2 AND ?3")
+    List<Productcomment> findByUserIdBetweenDates(Long id, LocalDate startDate, LocalDate endDate);
 }
