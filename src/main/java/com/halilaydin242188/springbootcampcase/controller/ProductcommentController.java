@@ -15,16 +15,11 @@ import com.halilaydin242188.springbootcampcase.model.Productcomment;
 import com.halilaydin242188.springbootcampcase.repository.ProductcommentRepository;
 
 @RestController
-@RequestMapping(path = "/api/productcomments")
+@RequestMapping(path = "/api/productcomment")
 public class ProductcommentController {
 
     @Autowired
     private ProductcommentRepository productcommentRepository;
-
-    @GetMapping(path = "/all")
-    public List<Productcomment> getAll() {
-        return productcommentRepository.findAll();
-    }
 
     @GetMapping(path = "/byProductId/{productId}")
     public List<Productcomment> getByProductId(@PathVariable Long productId) {
@@ -32,7 +27,7 @@ public class ProductcommentController {
         return productcommentRepository.findByProductId(productId);
     }
 
-    @GetMapping("/byProductBetweenDates")
+    @GetMapping("/byProductIdBetweenDates")
     public List<Productcomment> getByProductBetweenDates(@RequestParam("productId") Long productId,
 
             @RequestParam("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
@@ -41,14 +36,6 @@ public class ProductcommentController {
         return productcommentRepository.findByProductBetweenDates(productId,
                 startDate, endDate);
     }
-
-    /*
-     * @GetMapping("/deneme")
-     * public int deneme(@RequestParam("date") @DateTimeFormat(pattern =
-     * "yyyy-MM-dd") LocalDate date) {
-     * return date.getYear();
-     * }
-     */
 
     @GetMapping(path = "/byUserId/{userId}")
     public List<Productcomment> getByUserId(@PathVariable Long userId) {
