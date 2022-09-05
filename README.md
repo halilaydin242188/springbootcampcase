@@ -25,4 +25,6 @@
 * date format is : yyyy-MM-dd  
 * example : localhost:8080/api/productcomment/byUserIdAndBetweenDates?userId=17&startDate=2000-12-01&endDate=2028-12-01
 
+#### Get expired products : localhost:8080/api/product/expired  
 
+#### Get not expired products : localhost:8080/api/product/notExpired  

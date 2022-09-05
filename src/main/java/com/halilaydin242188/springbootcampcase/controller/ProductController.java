@@ -1,12 +1,9 @@
 package com.halilaydin242188.springbootcampcase.controller;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,9 +23,15 @@ public class ProductController {
         return productRepository.findAll();
     }
 
-    @GetMapping("/byExpirationDateLessThanNow")
-    public List<Product> getByExpirationDateLessThanNow() {
+    @GetMapping(path = "/expired")
+    public List<Product> getExpiredProducts() {
 
-        return productRepository.findByExpirationDateLessThanNow();
+        return productRepository.findExpiredProducts();
+    }
+
+    @GetMapping(path = "/notExpired")
+    public List<Product> getNotExpiredProducts() {
+
+        return productRepository.findNotExpiredProducts();
     }
 }

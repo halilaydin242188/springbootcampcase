@@ -55,7 +55,7 @@ insert into products (name, price, expiration_date) values ('Cranberries - Froze
 insert into products (name, price, expiration_date) values ('Hummus - Spread', 287.14, '2027-01-19');
 insert into products (name, price, expiration_date) values ('Soup - Campbells Broccoli', 531.09, '2029-04-14');
 insert into products (name, price, expiration_date) values ('Wine - White, Ej', 343.74, '2028-06-19');
-insert into products (name, price, expiration_date) values ('Sour Puss - Tangerine', 791.43, '2028-01-04');
+insert into products (name, price, expiration_date) values ('Sour Puss - Tangerine', 791.43, null);
 insert into products (name, price, expiration_date) values ('Veal - Insides, Grains', 127.05, '2018-11-05');
 insert into products (name, price, expiration_date) values ('Tomato - Tricolor Cherry', 554.2, '2022-08-01');
 insert into products (name, price, expiration_date) values ('Breakfast Quesadillas', 742.73, '2023-08-15');
@@ -64,7 +64,7 @@ insert into products (name, price, expiration_date) values ('Tea - Decaf Lipton'
 insert into products (name, price, expiration_date) values ('Pasta - Ravioli', 656.57, '2014-12-29');
 insert into products (name, price, expiration_date) values ('Chocolate - Chips Compound', 688.75, '2022-12-19');
 insert into products (name, price, expiration_date) values ('Bread Base - Italian', 258.42, '2028-01-22');
-insert into products (name, price, expiration_date) values ('Ranchero - Primerba, Paste', 988.99, '2022-12-18');
+insert into products (name, price, expiration_date) values ('Ranchero - Primerba, Paste', 988.99, null);
 insert into products (name, price, expiration_date) values ('Arctic Char - Fillets', 656.21, '2023-09-06');
 insert into products (name, price, expiration_date) values ('Yeast - Fresh, Fleischman', 799.75, '2027-08-24');
 insert into products (name, price, expiration_date) values ('Coffee - French Vanilla Frothy', 936.94, '2027-11-10');
@@ -79,7 +79,7 @@ insert into products (name, price, expiration_date) values ('Tea - Green', 373.3
 insert into products (name, price, expiration_date) values ('Cattail Hearts', 541.97, '2023-03-22');
 insert into products (name, price, expiration_date) values ('Mushroom Morel Fresh', 460.98, '2017-05-22');
 insert into products (name, price, expiration_date) values ('Jicama', 852.2, '2027-10-14');
-insert into products (name, price, expiration_date) values ('Glass - Juice Clear 5oz 55005', 757.55, '2023-06-18');
+insert into products (name, price, expiration_date) values ('Glass - Juice Clear 5oz 55005', 757.55, null);
 insert into products (name, price, expiration_date) values ('Onions Granulated', 751.81, '2022-09-13');
 insert into products (name, price, expiration_date) values ('Ecolab - Ster Bac', 710.68, '2028-12-13');
 insert into products (name, price, expiration_date) values ('Energy Drink Red Bull', 249.51, '2027-03-08');
